@@ -1,0 +1,161 @@
+/*--general*/
+
+* {
+    box-sizing: border-box;
+}
+
+  body {
+    font-family: 'Raleway', sans-serif;
+    line-height:1.5;
+    text-align:center;
+    background-color:snow;
+  }
+
+  h1 {
+    font-family: 'Over the Rainbow', cursive;
+    letter-spacing: 5px;
+    text-align: center;
+  }
+  h2,h3,h4,h5,h6 {
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 5px;
+    text-align: center;
+    font-weight:bold;
+  }
+  h3,h4,h5,h6 {
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 5px;
+    text-align: center;
+  }
+
+a {
+    color:black;
+    text-decoration:none;
+  }
+
+a:hover{
+  color:white;
+  text-transform:uppercase;
+}
+
+i{
+  font-size:20px !important;
+}
+
+/* header*/
+header {
+  background-image:url('../images/girlWithDog-new.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:73vh;
+  padding:.5%;
+}
+
+nav {
+  text-align:right;
+  letter-spacing:2px;
+  padding-top:1%;
+}
+
+.Links{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-Between;
+}
+
+nav img {
+  width:70%;
+}
+.titles{
+  padding-top:3%;
+}
+
+/*About section*/
+
+#about {
+  background-color:snow;
+  justify-content: center;
+  padding:1%;
+}
+
+/*skills section*/
+.skills{
+  background-color:seashell;
+  padding:1.5%;
+  margin:.5%;
+}
+
+
+/*experience section*/
+.experience{
+  background-color:snow;
+  padding:2% 2;
+}
+.col-5{
+  text-align:left;
+}
+
+/*education*/
+#education{
+  background-color:snow;
+  padding:2%;
+  margin-top: 1%;
+}
+
+/*references*/
+#references {
+  background-color:#e4d7c7;
+  text-align:center;
+  padding:1%;
+}
+
+/*footer*/
+footer {
+  background-image:url('../images/work_coffee.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:100vh;
+  padding:.5%;
+}
+
+
+label {
+  text-align:center;
+  color:white;
+  font-weight:bold;
+  margin-top:1%;
+}
+
+button{
+  margin-top:1%;
+  padding-top:1% !important;
+  font-family:'Raleway', serif;
+  font-weight:bold;
+
+}
+button:hover{
+    color:white;
+}
+
+footer nav{
+  text-decoration: none;
+  text-align:center;
+  padding-top:1%;
+  margin:1%;
+}
+
+textarea{
+  padding:20%;
+  margin:.5%;
+}
+
+nav i{
+  margin-top:5%;
+  width:25px !important;
+  color:white;
+}
+
+footer nav a:hover{
+  color:grey;
+  text-transform:uppercase;
+}
