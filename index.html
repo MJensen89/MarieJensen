@@ -4,22 +4,44 @@ title: Marie Jensen
 test:
     - title: Social Media Marketing
       desc: Developed initial social media plan and presence for startup brand. Build social media calendar, posts, advertising and promotions across social media platforms and blogs.Bachelor of International Business with a specialisation in international Marketing. Bachelorthesis about Social Media (User Genereated Content) in Tourism Marketing
-      title: Web Development
+    - title: Web Development
       desc: Developed fully functional responsive prototypes based on Business Requirements using HTML/HTML5, CSS3, JavaScript and JQuery.
-      title: Search Engine Advertisement
+    - title: Search Engine Advertisement
       desc: Researched, wrote, edited, and structured online content as well as Data collected from consumers
 more:
-    - title:Photography and Editing
-      desc:Monitord effectiveness of SEA marketing strategies in terms of traffic and pptimise keyword use and effectiveness. Troubleshooted poor rankings and develop improvement strategies.Utilised keyword research tools to track progress and performance.
-      title:Languages
-      desc:Deutsch: Mothertongue
-      English: Fluent, Bachelor and Masterstudies in english language
-      Espanol: Used to be able to hold a conversation, now I understand most of it, can't answer more than basic sentences. Would come back easily
-      Bahasa: can do the basic
-      title:As well as
-      desc:Content Management, Data anylsis management,
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
+    - title: Photography and Editing
+      desc: Monitord effectiveness of SEA marketing strategies in terms of traffic and pptimise keyword use and effectiveness. Troubleshooted poor rankings and develop improvement strategies.Utilised keyword research tools to track progress and performance.
+    - title: Languages
+      desc: Deutsch Mothertongue, English Fluent, Bachelor and Masterstudies in english language, Espanol Used to be able to hold a conversation, now I understand most of it, can't answer more than basic sentences. Would come back easily,Bahasa can do the basic
+    - title: As well as
+      desc: Content Management, Data anylsis management, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+exp:
+    - date: 2017
+      title: Working Student at Uni
+      desc: Creation of image concept for university’s website,Creation of exemplary website for departments (Typo 3),Entering of content onto new websites
+exp2:
+    - date: 2016-2017
+      title: Marketing Assistant at Plunet
+      desc: B2B interaction, Supervision of Network Channels (LinkedIn, Facebook, Twitter), Event Management, Writing and publishing of press releases (WordPress),Creation of company’s Instagram guideline
+exp3:
+    - date: 2016
+      title: Working Student at Comtrave
+      desc: Data analysis for customers profiles and booking requests
+exp4:
+    - date: 2015-2016
+      title: Working Student at Smava
+      desc: Search Engine Advertisement in Google AdWords and Bing, Creation and distribution of Facebook Campaigns, Analysis and optimization of advertisement campaigns, Target group optimization
+exp5:
+    - date: various
+      title: other Experiences
+      desc: Exchange Year Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Aupair Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Volunteer WorkDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Work and Travel Australia Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+edu:
+    - uni: Master Programm at HOST
+      desc: TDS blablabla
+    - uni: Bachelor Programm at HTW Berlin
+      desc: International Business blablalba
+    - uni: FOG
+      desc: Design School
 
 ---
     <section id="about"> <!--about section-->
@@ -33,7 +55,7 @@ more:
     <section id="skills" class="skills grid-center">
       <h2>-What I can do-</h2>
       <div class="grid-spaceAround">
-        {% for skill in page.test %}
+        {% for test in page.test %}
         <div class="col-3_sm-4_xs-12">
           <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
           <h3>{{test.title}}</h3>
@@ -43,7 +65,7 @@ more:
       </div>
 
         <div class="grid-spaceAround">
-        {% for skill in page.more}
+        {% for more in page.more %}
         <div class="col-3_sm-4_xs-12">
           <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
             <h3>{{more.title}}</h3>
@@ -54,91 +76,86 @@ more:
   </section>
   <!--skills end here -->
   <!--experience section-->
-    <section id="experience">
-        <h2>-What I've done-</h2>
+  <section id="experience">
+      <h2>-What I've done-</h2>
+      {% for exp in page.exp %}
+      <div class="grid-spaceAround">
+        <div class="col-2_sm-4_xs-12">
+            <h5>{{exp.date}}</h5>
+        </div>
+        <div class="col-3_sm-4_xs-12">
+          <h4>{{exp.title}}</h4>
+        </div>
+          <div class="col-5_sm-4_xs-12">
+          <p>{{exp.desc}}</p>
+        </div>
+      </div>
+        {% endfor %}
+      {% for exp2 in page.exp2 %}
         <div class="grid-spaceAround">
-          <div class="col-1_sm-12_xs-12">
-            <p> Date</p>
+          <div class="col-2_sm-4_xs-12">
+              <h5>{{exp2.date}}</h5>
           </div>
-          <div class="col-3_sm-12_xs-12">
-            <h3>Working student in the communication department</h3>
-            <a target="_blank" href="www.hochschule-stralsund.de/en"><h5>University of Applied Science Stralsund, Stralsund</h5></a>
+          <div class="col-3_sm-4_xs-12">
+            <h4>{{exp2.title}}</h4>
           </div>
-          <div class="col-6_sm-12_xs-12">
-            <p>Creation of image concept for university’s website<br>Creation of exemplary website for departments (Typo 3)<br>Entering of content onto new websites</p>
+            <div class="col-5_sm-4_xs-12">
+            <p>{{exp2.desc}}</p>
           </div>
         </div>
+      {% endfor %}
+      {% for exp3 in page.exp3 %}
         <div class="grid-spaceAround">
-          <div class="col-1_sm-12_xs-12">
-            <p> Date</p>
+          <div class="col-2_sm-4_xs-12">
+              <h5>{{exp3.date}}</h5>
           </div>
-          <div class="col-3_sm-12_xs-12">
-            <h3>Marketing Assistant</h3>
-            <a target="_blank" href="www.plunet.com"> <h5>Plunet, Berlin </h5></a>
+          <div class="col-3_sm-4_xs-12">
+            <h4>{{exp3.title}}</h4>
           </div>
-          <div class="col-6_sm-12_xs-12">
-            <p>B2B interaction<br>Supervision of Network Channels (LinkedIn, Facebook, Twitter)<br>Event Management<br>Writing and publishing of press releases (WordPress)<br>Creation of company’s Instagram guideline</p>
+            <div class="col-5_sm-4_xs-12">
+            <p>{{exp3.desc}}</p>
           </div>
         </div>
+      {% endfor %}
+      {% for exp4 in page.exp4 %}
         <div class="grid-spaceAround">
-          <div class="col-1_sm-12_xs-12">
-            <p> Date</p>
+          <div class="col-2_sm-4_xs-12">
+              <h5>{{exp4.date}}</h5>
           </div>
-          <div class="col-3_sm-12_xs-12">
-            <h3>Working Student for Data Analysis</h3>
-            <a target="_blank" href="www.comtravo.com"><h5>Comtravo, Berlin</h5></a>
+          <div class="col-3_sm-4_xs-12">
+            <h4>{{exp4.title}}</h4>
           </div>
-          <div class="col-6_sm-12_xs-12"> <!--at every col?!-->
-            <p>Data analysis for customers profiles and booking requests</p>
+            <div class="col-5_sm-4_xs-12">
+            <p>{{exp4.desc}}</p>
           </div>
         </div>
+      {% endfor %}
+      {% for exp5 in page.exp5 %}
         <div class="grid-spaceAround">
-          <div class="col-1">
-            <p> Date</p>
+          <div class="col-2_sm-4_xs-12">
+              <h5>{{exp5.date}}</h5>
           </div>
-        <div class="col-3_sm-12_xs-12">
-            <h3>Working Student for Online Performance Marketing</h3>
-            <a target="_blank" href="www.smava.de">  <h5>smava GmbH, Berlin</h5></a>
+          <div class="col-3_sm-4_xs-12">
+            <h4>{{exp5.title}}</h4>
+          </div>
+            <div class="col-5_sm-4_xs-12">
+            <p>{{exp5.desc}}</p>
+          </div>
         </div>
-        <div class="col-6_sm-12_xs-12">
-            <p>Search Engine Advertisement in Google AdWords and Bing<br>Creation and distribution of Facebook Campaigns <br>Analysis and optimization of advertisement campaigns<br>Target group optimization</p>
-          </div>
-          <div class="grid-spaceAround">
-            <div class="col-1">
-              <p>various</p>
-            </div>
-          <div class="col-3_sm-12_xs-12">
-              <h3>other Experiences</h3>
-          </div>
-          <div class="col-6_sm-12_xs-12">
-              <p>Exchange Year Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  <br>Aupair Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat<br>Volunteer WorkDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>W&T Australia Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-        </div>
+      {% endfor %}
   </section>
   <!--Experience end here -->
   <!--Education starts here -->
   <section id="education">
       <h2> - Education Background - </h2>
       <div class="grid-spaceAround">
-        <div class="col-3_sm-12_xs-12">
+        {% for edu in page.edu %}
+        <div class="col-3_sm-4_xs-12">
           <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-          <h3>Master</h3>
-          <a target="_blank" href="www.hochschule-stralsund.de/en"><h5>University of Applied Science Stralsund, Stralsund</h5></a>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          <h3>{{edu.uni}}</h3>
+          <p>{{edu.desc}}</p>
         </div>
-        <div class="col-3_sm-12_xs-12">
-          <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-          <h3>Bachelor</h3>
-          <a target="_blank" href="www.hochschule-stralsund.de/en"><h5>HTW</h5></a>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-        </div>
-        <div class="col-3_sm-12_xs-12">
-          <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-          <h3>Abi</h3>
-          <a target="_blank" href="www.hochschule-stralsund.de/en"><h5>ABI</h5></a>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-        </div>
-      </div>
+        {% endfor %}
 </section>
 <!--Education starts here -->
 <!--maybe section about other experiences-->
